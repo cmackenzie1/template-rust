@@ -1,0 +1,25 @@
+[workspace]
+resolver = "3"
+members = ["crates/*"]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2024"
+rust-version = "1.99"
+license = "MIT"
+
+[workspace.dependencies]
+# anyhow = "1"
+# bytes = "1"
+# serde = { version = "1", features = ["derive"] }
+# serde_json = "1"
+# thiserror = "2"
+# tokio = { version = "1", features = ["full"] }
+
+[profile.release]
+# Link-time optimization across all crates: smaller, faster binaries at the
+# cost of slower release builds. Use "thin" for a faster build with most of the gain.
+lto = true
+# Strip symbols and debug info from the binary to reduce its size.
+# Panic backtraces will show addresses instead of function names.
+strip = true

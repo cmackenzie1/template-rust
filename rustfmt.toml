@@ -1,0 +1,3 @@
+# Unstable options: format with `cargo +nightly fmt` (see `just fmt`).
+group_imports = "StdExternalCrate"
+imports_granularity = "Crate"
