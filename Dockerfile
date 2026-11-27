@@ -1,7 +1,7 @@
 # syntax=docker/dockerfile:1
 ARG NAME=template-rust
 
-FROM rust:1.99-trixie AS builder
+FROM rust:1.100-trixie AS builder
 ARG NAME
 WORKDIR /src
 
